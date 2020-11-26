@@ -8,3 +8,4 @@ Projeto desenvolvido com base no curso **Formação Node.js** de Victor Lima.
 * Express.js
 * MySQL
 * EJS
+* Bootstrap
