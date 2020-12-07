@@ -14,3 +14,5 @@ const Pergunta = connection.define('pergunta', { //nome da tabela
 });
 
 Pergunta.sync({force: false}).then(() => {}); //sincronizar com o banco de dados
+
+module.exports = Pergunta;
