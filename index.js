@@ -24,8 +24,14 @@ app.use(bodyParser.json());
 
 //rotas
 app.get("/", (req, res) => {
-    //renderizar o html
-    res.render("index");
+    //procurar e retornar as perguntas (select * all from)
+    //raw: true para listar somente os dados
+    Pergunta.findAll({raw: true}).then(perguntas => {
+        //renderizar o html
+        res.render("index", {
+            perguntas: perguntas
+        });
+    });  
 });
 
 app.get("/perguntar", (req, res) => {
