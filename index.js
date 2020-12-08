@@ -26,7 +26,9 @@ app.use(bodyParser.json());
 app.get("/", (req, res) => {
     //procurar e retornar as perguntas (select * all from)
     //raw: true para listar somente os dados
-    Pergunta.findAll({raw: true}).then(perguntas => {
+    Pergunta.findAll({raw: true, order: [
+        ['id', 'DESC']
+    ]}).then(perguntas => {
         //renderizar o html
         res.render("index", {
             perguntas: perguntas
