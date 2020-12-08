@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/header.ejs') %> 
+    <body>
+        <%- include('partials/navbar.ejs') %>
+
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <h1 class="margem-inferior"><%= pergunta.titulo %></h1>
+                </div>
+                <div class="card-body">
+                    <p><%= pergunta.descricao %></p>
+                    <a href="#" class="btn btn-primary">Responder</a>
+                </div>
+            </div>
+        </div>
+        
+        <%- include('partials/footer.ejs') %>
+    </body>
+</html>
