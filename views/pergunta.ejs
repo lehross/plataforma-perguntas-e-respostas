@@ -11,7 +11,14 @@
                 </div>
                 <div class="card-body">
                     <p><%= pergunta.descricao %></p>
-                    <a href="#" class="btn btn-primary">Responder</a>
+                </div>
+                <div class="card-footer">
+                    <form action="/responder" method="POST">
+                        <h4><label for="respostaCorpo">Resposta</label></h4>
+                        <textarea name="corpo" id="respostaCorpo" placeholder="Digite sua resposta" class="form-control margem-inferior" required></textarea>
+                        <input type="hidden" name="pergunta" value="<%= pergunta.id %>">
+                        <button type="submit" class="btn btn-primary">Responder</button>
+                    </form>
                 </div>
             </div>
         </div>
