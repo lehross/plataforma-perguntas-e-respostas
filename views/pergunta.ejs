@@ -14,15 +14,27 @@
                 </div>
                 <div class="card-footer">
                     <form action="/responder" method="POST">
-                        <h4><label for="respostaCorpo">Resposta</label></h4>
+                        <h4><label for="respostaCorpo">Responda</label></h4>
                         <textarea name="corpo" id="respostaCorpo" placeholder="Digite sua resposta" class="form-control margem-inferior" required></textarea>
                         <input type="hidden" name="pergunta" value="<%= pergunta.id %>">
                         <button type="submit" class="btn btn-primary">Responder</button>
                     </form>
                 </div>
             </div>
+            <div class="card-respostas card">
+                <div class="card-header">
+                    <h5>Respostas</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <% respostas.forEach(resposta => { %>
+                        <li class="list-group-item">
+                            <%= resposta.corpo %>
+                        </li>
+                    <% }); %> 
+                </ul>
+            </div>
         </div>
-        
+
         <%- include('partials/footer.ejs') %>
     </body>
 </html>

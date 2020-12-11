@@ -20,3 +20,7 @@ body {
 .titulo a {
     font-size: 20px;
 }
+
+.card-respostas {
+    margin-top: 10px !important;
+}
